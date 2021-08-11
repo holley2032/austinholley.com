@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import HomePhoto from "./HomePhoto";
-import HomeMainText from "./HomeMainText";
+import Header from "../components/Header";
+import HomePhoto from "../components/HomePhoto";
+import HomeMainText from "../components/HomeMainText";
 
 const HomePage = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   const name = "Austin";
@@ -9,6 +10,7 @@ const App = () => {
       <header className="App-header">
         <p>
           Hello {name}, it is currently {time.toLocaleString()}.
+          <HomePage />
         </p>
       </header>
     </div>
