@@ -1,5 +1,6 @@
 import React from "react";
 import HomePage from "./pages/HomePage";
+import "./App.css";
 
 const App = () => {
   const name = "Austin";
@@ -7,12 +8,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Hello {name}, it is currently {time.toLocaleString()}.
-          <HomePage />
-        </p>
-      </header>
+      <p>
+        Hello {name}, it is currently {time.toLocaleString()}.
+        <HomePage />
+      </p>
     </div>
   );
 };
