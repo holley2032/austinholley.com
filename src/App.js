@@ -1,18 +1,24 @@
 import React from "react";
 import HomePage from "./pages/HomePage";
 import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Contact from "./pages/Contact";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const App = () => {
-  const name = "Austin";
-  const time = new Date();
-
   return (
-    <div className="App">
-      <p>
-        Hello {name}, it is currently {time.toLocaleString()}.
+    <BrowserRouter>
+      <div className="App">
+        <header>
+          <Header />
+        </header>
         <HomePage />
-      </p>
-    </div>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 };
 
