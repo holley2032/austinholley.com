@@ -1,30 +1,33 @@
-import React from "react";
+import { React, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import "../styles/Navbar.css";
-import Contact from "../pages/Contact";
-import { Route, Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Header = () => {
-  const { path } = useRouteMatch();
-
+const Header = (props) => {
   return (
     <div className="Header">
-      <Navbar className="navbarHeader" variant="light">
+      <Navbar className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <Container>
           <Navbar.Brand>
             <Link to="/home">Kevin Austin Holley</Link>
           </Navbar.Brand>
-          <Nav>
-            <Nav.Link>
-              <Link to="/about-me">About Me</Link>
-            </Nav.Link>
-            <Nav.Link href="#projects">My Projects</Nav.Link>
-            <Nav.Link>
-              <Link to="/contact">Contact Me</Link>
-            </Nav.Link>
-          </Nav>
+          <ul className="nav nav-pills">
+            <li className="nav-item">
+              <Link to="/about-me" className={"nav-link " + props.active}>
+                About Me
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/projects" className={"nav-link " + props.active}>
+                My Projects
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/contact" className={"nav-link " + props.active}>
+                Contact Me
+              </Link>
+            </li>
+          </ul>
         </Container>
       </Navbar>
     </div>
